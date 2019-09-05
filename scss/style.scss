@@ -1,0 +1,245 @@
+* {box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body, html {
+          margin: 0;
+          padding: 0;
+          font-size: 15px;
+           height: 100%;
+           font-size: 14px;
+           word-break: break-all;
+}
+
+header {
+        background: #5FA0B7;
+        height:70px;
+        border-bottom: 1px solid #0F4965;}
+
+.blockquote-custom {
+        margin: 0px;
+    .quote-text {color: white;
+                font-size: 17px;
+                margin: 0px; 
+                word-break: normal;}
+}
+ 
+.categories {
+        background:rgb(242, 241, 255);
+        width:100%;
+        border-right: 1px solid #5FA0B7;
+        border-bottom: 1px solid #5FA0B7;
+}
+
+ul { 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.to-dos {
+  margin-right: 10px;
+}
+
+.all-tasks {
+    &:hover {
+        text-decoration: none;
+       }
+    & li {
+         padding: 5px 15px;
+         background-color: #C13442;
+         color: white;
+     &:hover {
+            background-color: #BA545E;}
+           }
+}
+
+.list-link {
+    color: #0F4965;
+    &:hover {text-decoration: none;
+        color: #0F4965;
+     }
+    & li {
+          padding: 5px 15px;
+         &:hover {background-color: #B7CDF9;}
+    } 
+}
+
+.chosen-list {
+      background: #5FA0B7;
+      color:white;
+      &:hover {
+          text-decoration: none;
+           background: #5FA0B7;
+          }
+}
+
+.regular-todo  { 
+     padding: 5px;
+     &:hover {background: #d6e3ff;
+      }
+}
+
+.starred-todo { 
+  padding: 5px;
+  background: #ffdea4;
+  color: #992329;
+  label {  font-weight: bold; }
+  &:hover {
+    background: #F4D46E;
+  }
+}
+
+.star {
+    fill: goldenrod;
+    &:hover {
+     fill: #A07D0D;
+    }
+}
+
+.edit-symbol {
+    fill: #0F4965;
+     &:hover {
+        fill: rgb(4, 20, 26);
+      }
+}
+
+.delete-task {
+  color: #992329;
+  font-size: 18px;
+  &:hover {
+    color: #FF0019;
+    text-decoration: none;
+  }
+}
+
+.form-layout {
+    border: solid #5FA0B7 1px;
+    background: rgb(242, 241, 255);
+    color: #0F4965;
+    border-radius: 4px;
+}
+
+.log-message {
+  padding-left: 15px;
+  word-break: normal;
+}
+
+
+footer {
+  background: #0F4965;
+  color: #F2E8F3;
+  font-size: 12px;
+  height:20px;
+}
+
+#main-area {  
+  overflow-x:hidden;
+  height: calc(100% - 90px);
+  padding: 0px;
+}
+
+.flexible-scope {
+    height: 100% !important;
+    display: flex;
+    width: 100%;
+    > .ng-scope { height: 100% !important;
+        display: flex;
+        width: 100%;
+    }
+}
+
+.custom-btn {
+      padding: 4px 8px;
+      font-family: 'Roboto Condensed', sans-serif;
+      border-radius: 4px;
+      font-weight: bold;
+      color: white;
+       &.hide-show {
+           width: 130px;
+           background-color: rgb(67, 130, 153);
+           border: solid rgb(18, 89, 124) 1px;
+           &:hover {
+             background: #0F4965;
+            }
+        }
+       &.cancel-task {
+             background-color: #C13442;
+             border: solid rgb(83, 0, 11) 1px;
+             &:hover {
+               background-color: rgb(240, 37, 57);
+              }
+        }   
+      &.create-task {
+            background-color: MediumSeaGreen;
+            border: solid rgb(29, 145, 35) 1px;
+                &:hover { 
+                  background-color: rgb(9, 202, 96);
+                }
+      }
+}
+
+.custom-input {
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin: 15px;
+    border: solid rgb(18, 89, 124) 1px;
+        &.custom-search {
+            width: 100%;
+            padding-right: 30px;
+            background-image: url('../img/search-solid.gif');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+}
+
+
+///  CheckBox
+input[type=checkbox] + label {
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1.3em;
+  height: 1.4em;
+  padding-left: 0.2em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .4s;
+}
+
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+}
+
+input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}
+
+
+ 
